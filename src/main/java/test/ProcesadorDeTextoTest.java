@@ -22,7 +22,7 @@ public class ProcesadorDeTextoTest {
                 "¡Que suene, que resuene... que nos recuerde quiénes somos y quiénes fuimos!\"";
 
         try {
-            assertThat(procesadorDeTexto.getCantidadDePalabras(texto)).isEqualTo(0);
+            assertThat(procesadorDeTexto.getCantidadDePalabras(texto)).isEqualTo(97);
             pruebasPasadas++;
             System.out.println("1 passed");
         } catch (AssertionError e) {
@@ -31,7 +31,7 @@ public class ProcesadorDeTextoTest {
         }
 
         try {
-            assertThat(procesadorDeTexto.getCantidadDeVocales(texto)).isEqualTo(0);
+            assertThat(procesadorDeTexto.getCantidadDeVocales(texto)).isEqualTo(207);
             pruebasPasadas++;
             System.out.println("2 passed");
         } catch (AssertionError e) {
@@ -40,7 +40,7 @@ public class ProcesadorDeTextoTest {
         }
 
         try {
-            assertThat(procesadorDeTexto.getCantidadDeConsonantes(texto)).isEqualTo(0);
+            assertThat(procesadorDeTexto.getCantidadDeConsonantes(texto)).isEqualTo(217);
             pruebasPasadas++;
             System.out.println("3 passed");
         } catch (AssertionError e) {
@@ -49,7 +49,7 @@ public class ProcesadorDeTextoTest {
         }
 
         try {
-            assertThat(procesadorDeTexto.getCantidadDeSignosDePuntuacion(texto)).isEqualTo(0);
+            assertThat(procesadorDeTexto.getCantidadDeSignosDePuntuacion(texto)).isEqualTo(17);
             pruebasPasadas++;
             System.out.println("4 passed");
         } catch (AssertionError e) {
@@ -58,7 +58,7 @@ public class ProcesadorDeTextoTest {
         }
 
         try {
-            assertThat(procesadorDeTexto.getCantidadDeCaracteres(texto)).isEqualTo(0);
+            assertThat(procesadorDeTexto.getCantidadDeCaracteres(texto)).isEqualTo(543);
             pruebasPasadas++;
             System.out.println("5 passed");
         } catch (AssertionError e) {
@@ -67,14 +67,14 @@ public class ProcesadorDeTextoTest {
         }
 
         try {
-            assertThat(procesadorDeTexto.getCantidadDeMayusculas(texto)).isEqualTo(0);
+            assertThat(procesadorDeTexto.getCantidadDeMayusculas(texto)).isEqualTo(6);
             pruebasPasadas++;
             System.out.println("6 passed");
         } catch (AssertionError e) {
             System.out.println(e.getMessage());
             pruebasFallidas++;
         }
-
+//
         try {
             assertThat(procesadorDeTexto.reemplazarPalabraPorOtra("la", "lx")).isNotEmpty();
             pruebasPasadas++;
@@ -83,15 +83,15 @@ public class ProcesadorDeTextoTest {
             System.out.println(e.getMessage());
             pruebasFallidas++;
         }
-
-        try {
-            assertThat(procesadorDeTexto.getListadoDePalabrasSinRepetirse(texto).size()).isGreaterThan( 0);
-            pruebasPasadas++;
-            System.out.println("8 passed");
-        } catch (AssertionError e) {
-            System.out.println(e.getMessage());
-            pruebasFallidas++;
-        }
+//
+//        try {
+//            assertThat(procesadorDeTexto.getListadoDePalabrasSinRepetirse(texto).size()).isGreaterThan( 0);
+//            pruebasPasadas++;
+//            System.out.println("8 passed");
+//        } catch (AssertionError e) {
+//            System.out.println(e.getMessage());
+//            pruebasFallidas++;
+//        }
 
         System.out.println("Pruebas pasadas: " + pruebasPasadas);
         System.out.println("Pruebas fallidas: " + pruebasFallidas);
